@@ -1,0 +1,19 @@
+body{
+    background: rgb(130,115,151);
+    background: linear-gradient(90deg, rgba(130,115,151,1), rgba(233,213,218,1));
+}
+h1{
+    color: rgb(44, 44, 44);
+}
+.top{
+    text-align: center;
+    margin-top: 5%;
+}
+.block{
+    text-align: center;
+    font-size: larger;
+    display: grid;
+}
+a.text {
+  text-decoration: none;
+}
