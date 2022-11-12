@@ -1,64 +1,35 @@
-b = 5
-a = 4
-console.log(a + b);
-
-function toHigh(str) {
-    return str.toUpperCase();
+function loveCalc() {
+    male_name = prompt("Имя парня:");
+    female_name = prompt("Имя дамы");
+    random_number = Math.round((Math.random(0, 100) * 100), 0);
+    alert(`${male_name} подходит к ${female_name} на ${random_number}%`);
 }
 
-function toLower(str) {
-    return str.toLowerCase();
+function calculatorBMI() {
+    weight = prompt("Введите вес");
+    height = prompt("Введите рост");
+
+    bmi = weight / (height * height);
+
+    alert(`Ваш индекс массы тела: ${bmi}`);
 }
 
-console.log(toHigh('Hello World'));
-console.log(toLower('Hello World'));
+function leapYearOrNot() {
+    year = prompt("Введите год");
 
-function sum(a, b) {
-    return a + b;
-}
-
-function sub(a, b) {
-    return a - b;
-}
-
-function mul(a, b) {
-    return a * b;
-}
-
-function div(a, b) {
-    return a / b;
-}
-
-function pow(a, b) {
-    return a ** b;
-}
-
-function mod(a, b) {
-    return a % b;
-}
-
-console.log("Сложение", sum(b, a));
-console.log("Вычитание", sub(b, a));
-console.log("Умножение", mul(b, a));
-console.log("Деление", div(b, a));
-console.log("Возведение в степень", pow(b, a));
-console.log("Остаток от деления", mod(b, a));
-
-//создать массив и найти номер элемента чье значение наибольшее 
-function findMax() {
-    let a = [1,5,6,34,2,43]
-    return Math.max.apply(null, a);
-}
-
-console.log('max: '+findMax());
-
-//реализация функции, которая в качестве аргумента принимает строку из букв и возвращает строку, где каждый символ разделен пробелом и заменен на юникод-значение символа   
-function getCodeStringFromText(str) {
-    let result = "";
-    for (let i = 0; i < str.length; i++) {
-        result += str.charCodeAt(i) + " ";
+    if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+        alert("Високосный год");
+    } else {
+        alert("Не високосный год");
     }
-    return result;
 }
 
-console.log(getCodeStringFromText("Hello World"));
+function WhoPaysForDinner() {
+    names = prompt("Введите имена через запятую");
+
+    names = names.split(",");
+
+    random_number = Math.round((Math.random(0, names.length) * names.length), 0);
+
+    alert(`${names[random_number]} платит за ужин`);
+}
